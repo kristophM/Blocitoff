@@ -6,3 +6,12 @@
   <li>Member since: <%=@user.created_at.strftime("%m/%d/%Y")%></li>
   <li>Email: <%=@user.email%></li>
 </ul>
+
+<h2>Items</h2>
+<div class="js-items">
+  <%= render partial: 'items/item', locals: {items: @items} %>
+</div>
+<h4>Add more items:</h4>
+<div class="new-item">
+  <%= render partial: 'items/form', locals: {user: @user, item: @item} %>
+</div>

@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #User authentication
 gem 'devise'
+#User authorization
+gem 'pundit'
 
 #Bootstrap
 gem 'bootstrap-sass'

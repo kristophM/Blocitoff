@@ -4,12 +4,11 @@
   <li>ID: <%=@user.id%></li>
   <li>Email: <%=@user.email%></li>
   <li>Member since: <%=@user.created_at.strftime("%m/%d/%Y")%></li>
-  <li>Email: <%=@user.email%></li>
 </ul>
 
 <h2>Items</h2>
 <div class="js-items">
-  <%= render partial: 'items/item', locals: {items: @items} %>
+  <%= render partial: 'items/item', collection: @items %>
 </div>
 <h4>Add more items:</h4>
 <div class="new-item">

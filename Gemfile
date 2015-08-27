@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #User authentication
 gem 'devise'
+#User authorization
+gem 'pundit'
 
 #Bootstrap
 gem 'bootstrap-sass'
@@ -57,4 +59,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  #Rspec unit tests, BDD
+  gem 'rspec-rails'
+  gem 'capybara'
 end

@@ -31,6 +31,8 @@ gem 'pundit'
 gem 'bootstrap-sass'
 #Environmental variable managment
 gem 'figaro', '1.0'
+#Faker for fake data generation
+gem 'faker'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

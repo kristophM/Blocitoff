@@ -34,6 +34,7 @@ gem 'figaro', '1.0'
 #Faker for fake data generation
 gem 'faker'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -64,4 +65,5 @@ group :development, :test do
   #Rspec unit tests, BDD
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end

@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!
   def create
     @item = current_user.items.new(item_params)
+    authorize @item
     @user = User.find(params[:user_id])
     @items = current_user.items
     @item.user = current_user
@@ -21,7 +22,8 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    @user = @item.user
+    authorize @item
+    @user = current_user
     if @item.destroy
       flash[:notice] = "Item has been removed"
     else

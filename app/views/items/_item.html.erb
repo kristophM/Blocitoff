@@ -1,4 +1,4 @@
 <%= content_tag :div, class: 'media list-group-item', id: "item-#{item.id}" do %>
-  <p><%= item.name%> - Created: <%=item.created_at.strftime("%m/%d/%Y")%> - <%= link_to "", [item.user, item], method: :delete, class: "glyphicon glyphicon-ok", remote: true %></p>
+  <p><%= item.name%> - Created: <%=item.created_at.strftime("%m/%d/%Y")%> - <%= link_to "", [item.user, item], id: "item-#{item.id}", method: :delete, class: "glyphicon glyphicon-ok", remote: true %></p>
   <h4><%= item.days_left%> days left</h4>
 <% end %>

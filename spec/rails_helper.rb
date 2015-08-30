@@ -3,7 +3,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
+#require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/rspec'
 
@@ -53,4 +53,13 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   ##Make factory girl's methods available
   config.include FactoryGirl::Syntax::Methods
+  ###START: the following lines configure Devise/Warden for feature testing via capybara/Rspec
+  config.include Warden::Test::Helpers
+  config.before :suite do
+    Warden.test_mode!
+  end
+  config.after :each do
+    Warden.test_reset!
+  end
+  ###END
 end

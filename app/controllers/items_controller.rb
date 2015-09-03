@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     authorize @item
     @user = current_user
     if @item.destroy

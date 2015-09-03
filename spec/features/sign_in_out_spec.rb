@@ -37,7 +37,7 @@ describe "Sign out flow" do
         click_link 'Sign Out'
       end
 
-      expect(current_path).to eq root_path
+      page.has_content?('Sign In')
     end
   end
 end
